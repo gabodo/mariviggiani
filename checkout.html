@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Academia MariVi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegación principal">
+            <div class="logo">Pago Academia MariVi</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="academy.html">Academia</a></li>
+                <li><a href="academy.html#cart" id="cart-link" aria-label="Ver carrito de compras">Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="checkout" aria-labelledby="checkout-heading">
+            <div class="container">
+                <h1 id="checkout-heading">Pago Seguro</h1>
+                <p class="checkout-intro">Completa tu compra para acceder a tus cursos. Todas las transacciones son seguras.</p>
+                
+                <div class="checkout-content">
+                    <div class="order-summary">
+                        <h2>Resumen del Pedido</h2>
+                        <div id="order-items" class="order-items">
+                            <!-- Items populated by JS -->
+                        </div>
+                        <div class="order-total">
+                            <strong>Total: $<span id="order-total">0</span></strong>
+                        </div>
+                    </div>
+
+                    <form id="payment-form" aria-label="Formulario de pago">
+                        <section aria-labelledby="billing-heading">
+                            <h2 id="billing-heading">Información de Facturación</h2>
+                            <div class="form-group">
+                                <label for="billing-name">Nombre Completo</label>
+                                <input type="text" id="billing-name" name="billing-name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="billing-email">Email</label>
+                                <input type="email" id="billing-email" name="billing-email" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="billing-address">Dirección</label>
+                                <input type="text" id="billing-address" name="billing-address" required aria-required="true" placeholder="Dirección calle">
+                            </div>
+                            <div class="form-group">
+                                <label for="billing-city">Ciudad</label>
+                                <input type="text" id="billing-city" name="billing-city" required aria-required="true">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="billing-state">Estado</label>
+                                    <input type="text" id="billing-state" name="billing-state" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="billing-zip">Código Postal</label>
+                                    <input type="text" id="billing-zip" name="billing-zip" required aria-required="true">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section aria-labelledby="payment-heading">
+                            <h2 id="payment-heading">Información de Pago</h2>
+                            <div class="form-group">
+                                <label for="card-number">Número de Tarjeta</label>
+                                <input type="text" id="card-number" name="card-number" required aria-required="true" placeholder="1234 5678 9012 3456" maxlength="19" inputmode="numeric">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">Fecha de Vencimiento</label>
+                                    <input type="text" id="card-expiry" name="card-expiry" required aria-required="true" placeholder="MM/AA" maxlength="5" inputmode="numeric">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvv">CVV</label>
+                                    <input type="text" id="card-cvv" name="card-cvv" required aria-required="true" placeholder="123" maxlength="4" inputmode="numeric">
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="form-actions">
+                            <button type="submit" id="submit-payment">Completar Compra</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Academia MariVi. Todos los derechos reservados. Pagos seguros impulsados por [Placeholder].</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
