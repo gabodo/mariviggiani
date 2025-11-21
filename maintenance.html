@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mari Viggiani — Sitio en construcción</title>
+  <meta name="description" content="El portafolio de Mari Viggiani está en mantenimiento. Vuelve pronto para ver servicios, trabajos y contacto." />
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0f1720; --card:#0b1220; --muted:#9aa3b5; --accent:#8ac6ff; --text:#eef2f6 }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#071024,#081423); color:var(--text)}
+    a{color:var(--accent)}
+    .skip{position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{position:static; width:auto; height:auto; padding:8px 12px; background:#fff; color:#000; border-radius:6px}
+    .container{max-width:900px; margin:0 auto; padding:36px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05)); border:1px solid rgba(255,255,255,0.03); padding:28px; border-radius:16px; box-shadow:0 10px 30px rgba(2,6,23,0.6); text-align:center; width:100%}
+    .logo{font-weight:800; font-size:20px; letter-spacing:.6px}
+    h1{margin:18px 0 8px; font-size:clamp(22px,5vw,36px)}
+    p.lead{color:var(--muted); margin:8px 0 18px}
+    .status{display:flex; gap:12px; align-items:center; justify-content:center; margin:18px 0}
+    .spinner{width:56px; height:56px; border-radius:12px; background:linear-gradient(135deg,var(--card), rgba(255,255,255,0.02)); display:grid; place-items:center}
+    .dot{width:10px; height:10px; border-radius:50%; background:var(--accent); animation:pulse 1s infinite ease-in-out}
+    @keyframes pulse{0%{transform:scale(.85); opacity:.6}50%{transform:scale(1.15); opacity:1}100%{transform:scale(.85); opacity:.6}}
+    .meta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+    .pill{background:rgba(255,255,255,0.03); padding:8px 12px; border-radius:999px; color:var(--muted); font-size:14px; border:1px solid rgba(255,255,255,0.02)}
+    .actions{display:flex; gap:10px; justify-content:center; margin-top:20px}
+    .btn{background:var(--accent); color:#06101a; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none}
+    .ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text); padding:10px 14px; border-radius:10px; text-decoration:none}
+    footer{margin-top:22px; color:var(--muted); font-size:13px}
+    @media (max-width:520px){ .container{padding:28px 14px} .card{padding:20px} }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">Saltar al contenido</a>
+  <main id="main" class="container" role="main">
+    <div class="card" aria-labelledby="title">
+      <div class="logo">Mari <span style="color:var(--accent)">Viggiani</span></div>
+      <h1 id="title">Sitio en construcción</h1>
+      <p class="lead">Estoy actualizando mi portafolio profesional. Pronto verás servicios, trabajos recientes y formas de contacto. ¡Gracias por tu paciencia!</p>
+
+      <div class="status" aria-hidden="true">
+        <div class="spinner"><div class="dot"></div></div>
+      </div>
+
+      <div class="meta" aria-hidden="false">
+        <span class="pill">Portafolio</span>
+        <span class="pill">Servicios</span>
+        <span class="pill">Contacto</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="mailto:contacto@mariviggiani.com">Enviar un email</a>
+        <a class="ghost" href="https://instagram.com/tuusuario" target="_blank" rel="noopener">Instagram</a>
+      </div>
+
+      <footer>
+        <div>© <span id="y"></span> Mari Viggiani</div>
+        <div style="margin-top:6px; color:var(--muted); font-size:12px">¿Necesitas contactarme urgentemente? Escribe a <a href="mailto:contacto@mariviggiani.com">contacto@mariviggiani.com</a></div>
+      </footer>
+    </div>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

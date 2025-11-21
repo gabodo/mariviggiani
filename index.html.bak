@@ -21,7 +21,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-	<!-- Estilos mínimos en línea para simplificar el despliegue -->
+	<!-- Estilos mnimos en lnea para simplificar el despliegue -->
 	<style>
 		:root{
 			--bg:#0f0f11; --card:#15161a; --soft:#1d1f25; --text:#e9e9ee; --muted:#b9bcc8; --brand:#8ac6ff;
@@ -65,30 +65,28 @@
 		@media (max-width:560px){ .about{grid-template-columns:1fr; text-align:center} .about .center{justify-content:center}}
 		.kicker{font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#9aa3b5}
 	</style>
-	</head>
+</head>
 
-	<body>
-	<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-	<!-- Navegación -->
+<body>
+	<!-- Navegaci3n -->
 	<header>
 		<div class="container nav">
 			<div class="logo">Mari <span style="color:var(--brand)">Viggiani</span></div>
 			<nav class="menu">
 				<a href="#servicios" class="pill">Servicios</a>
 				<a href="#portafolio" class="pill">Portafolio</a>
-				<a href="#sobre-mi" class="pill">Sobre mí</a>
+				<a href="#sobre-mi" class="pill">Sobre md</a>
 				<a href="#contacto" class="btn">Contacto</a>
 			</nav>
 		</div>
 	</header>
 
-	<main id="main-content" role="main">
 	<!-- Hero -->
 	<section class="hero">
 		<div class="container">
 			<p class="kicker">Portafolio profesional</p>
 			<h1>Hola, soy <span style="color:var(--brand)">Mari Viggiani</span></h1>
-			<p class="lead">Ayudo a personas y marcas a destacar con trabajo de alta calidad. Aquí verás mis servicios, proyectos recientes y cómo podemos trabajar juntos.</p>
+			<p class="lead">Ayudo a personas y marcas a destacar con trabajo de alta calidad. Aqud ver1s mis servicios, proyectos recientes y c3mo podemos trabajar juntos.</p>
 			<div class="chips">
 				<!-- Reemplaza estos chips por tus especialidades -->
 				<span class="chip">Servicio 1</span>
@@ -108,15 +106,15 @@
 			<div class="grid grid-3">
 				<div class="card">
 					<h3>Servicio A</h3>
-					<p class="muted">Descripción breve del servicio. Qué incluye y el resultado que obtiene el cliente.</p>
+					<p class="muted">Descripci3n breve del servicio. Qu9 incluye y el resultado que obtiene el cliente.</p>
 				</div>
 				<div class="card">
 					<h3>Servicio B</h3>
-					<p class="muted">Descripción breve del servicio. Qué incluye y el resultado que obtiene el cliente.</p>
+					<p class="muted">Descripci3n breve del servicio. Qu9 incluye y el resultado que obtiene el cliente.</p>
 				</div>
 				<div class="card">
 					<h3>Servicio C</h3>
-					<p class="muted">Descripción breve del servicio. Qué incluye y el resultado que obtiene el cliente.</p>
+					<p class="muted">Descripci3n breve del servicio. Qu9 incluye y el resultado que obtiene el cliente.</p>
 				</div>
 			</div>
 		</div>
@@ -129,34 +127,52 @@
 				<h2>Trabajos recientes</h2>
 				<span class="tag">Portafolio</span>
 			</div>
+			<!-- Reemplaza las im1genes /images/*.jpg por tus propios archivos -->
 			<div class="grid grid-3">
 				<a class="card" href="images/proyecto-1.jpg" target="_blank" rel="noopener">
 					<img src="images/proyecto-1.jpg" alt="Proyecto 1">
-					<p class="muted">Proyecto 1 — breve descripción</p>
+					<p class="muted">Proyecto 1 22 breve descripci3n</p>
 				</a>
 				<a class="card" href="images/proyecto-2.jpg" target="_blank" rel="noopener">
 					<img src="images/proyecto-2.jpg" alt="Proyecto 2">
-					<p class="muted">Proyecto 2 — breve descripción</p>
+					<p class="muted">Proyecto 2 22 breve descripci3n</p>
 				</a>
 				<a class="card" href="images/proyecto-3.jpg" target="_blank" rel="noopener">
 					<img src="images/proyecto-3.jpg" alt="Proyecto 3">
-					<p class="muted">Proyecto 3 — breve descripción</p>
+					<p class="muted">Proyecto 3 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-4.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-4.jpg" alt="Proyecto 4">
+					<p class="muted">Proyecto 4 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-5.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-5.jpg" alt="Proyecto 5">
+					<p class="muted">Proyecto 5 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-6.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-6.jpg" alt="Proyecto 6">
+					<p class="muted">Proyecto 6 22 breve descripci3n</p>
 				</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- Sobre mí -->
+	<!-- Sobre md -->
 	<section id="sobre-mi">
 		<div class="container card">
 			<div class="about">
 				<div class="center">
+					<!-- Reemplaza por tu foto en /images/avatar.jpg -->
 					<img class="avatar" src="images/avatar.jpg" alt="Foto de Mari Viggiani">
 				</div>
 				<div>
-					<h2>Sobre mí</h2>
-					<p class="muted">Breve biografía profesional, experiencia y enfoque de trabajo. Añade logros, certificaciones o clientes clave.</p>
-					<p class="muted">Trabajo de forma remota y presencial. ¿Tienes un proyecto? Conversemos.</p>
+					<h2>Sobre md</h2>
+					<p class="muted">
+						Breve biografda profesional, experiencia y enfoque de trabajo. A1ade logros, certificaciones o clientes clave.
+					</p>
+					<p class="muted">
+						Trabajo de forma remota y presencial. fTienes un proyecto? Conversemos.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -169,21 +185,25 @@
 				<h2>Contacto</h2>
 				<span class="tag">Hablemos de tu proyecto</span>
 			</div>
+
 			<div class="grid grid-2">
 				<div class="card">
 					<h3>Reserva o cotiza</h3>
-					<p class="muted">Respondo rápido por WhatsApp y correo.</p>
+					<p class="muted">Respondo r1pido por WhatsApp y correo.</p>
 					<p>
+						<!-- Reemplaza con tus enlaces reales -->
 						<a class="btn" href="https://wa.me/50700000000" target="_blank" rel="noopener">WhatsApp</a>
 						&nbsp;&nbsp;
 						<a class="pill" href="mailto:contacto@mariviggiani.com">contacto@mariviggiani.com</a>
 					</p>
 				</div>
+
 				<div class="card">
 					<h3>Redes</h3>
-					<p class="muted">Sígueme para ver trabajos y novedades.</p>
+					<p class="muted">Sdgueme para ver trabajos y novedades.</p>
 					<div class="social">
 						<a href="https://instagram.com/tuusuario" target="_blank" aria-label="Instagram" rel="noopener">
+							<!-- dono Instagram (SVG) -->
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 								<rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.6"/>
 								<circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
@@ -200,14 +220,14 @@
 								<path d="M6.5 9H4V20h2.5V9ZM5.3 4a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM20 20h-2.6v-5.9c0-1.9-.8-3-2.4-3-1.4 0-2.2.9-2.5 1.7-.1.3-.1.7-.1 1.1V20H9.9s.1-9.6 0-10.6H12l.1 1.7c.3-.9 1.9-2.1 4.1-2.1 2.6 0 3.8 1.6 3.8 4.7V20Z" fill="currentColor"/>
 							</svg>
 						</a>
-						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		</main>
 
-		<footer>
+		</div>
+	</section>
+
+	<footer>
 		<div class="container center" style="flex-direction:column; gap:6px; text-align:center">
 			<small>&copy; <span id="y"></span> Mari Viggiani. Todos los derechos reservados.</small>
 			<small><a href="#top">Volver arriba</a></small>
@@ -215,7 +235,7 @@
 	</footer>
 
 	<script>
-		// Año automático en el footer
+		// A1o autom1tico en el footer
 		document.getElementById('y').textContent = new Date().getFullYear();
 	</script>
 </body>
