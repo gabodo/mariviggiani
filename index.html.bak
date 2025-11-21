@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Mari Viggiani  Portafolio Profesional</title>
+	<meta name="description" content="Portafolio profesional de Mari Viggiani. Servicios, trabajos, contacto y redes." />
+	<meta name="author" content="Mari Viggiani" />
+
+	<!-- Open Graph (para compartir en redes) -->
+	<meta property="og:title" content="Mari Viggiani  Portafolio Profesional" />
+	<meta property="og:description" content="Conoce mis servicios y trabajos recientes." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.mariviggiani.com" />
+	<!-- Reemplaza por tu imagen -->
+	<meta property="og:image" content="https://www.mariviggiani.com/images/cover.jpg" />
+
+	<!-- Fuente bonita y ligera -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+	<!-- Estilos mnimos en lnea para simplificar el despliegue -->
+	<style>
+		:root{
+			--bg:#0f0f11; --card:#15161a; --soft:#1d1f25; --text:#e9e9ee; --muted:#b9bcc8; --brand:#8ac6ff;
+			--radius:18px; --shadow:0 10px 30px rgba(0,0,0,.2);
+		}
+		*{box-sizing:border-box}
+		html,body{margin:0; padding:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--text); background:linear-gradient(180deg,#0e0f12,#0b0c0f);}
+		a{color:var(--brand); text-decoration:none}
+		img{max-width:100%; display:block; border-radius:12px}
+		.container{width:min(1100px,92%); margin-inline:auto}
+		header{padding:26px 0}
+		.nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+		.logo{font-weight:800; letter-spacing:.4px}
+		.pill{background:var(--soft); padding:8px 14px; border-radius:999px}
+		.nav a{color:var(--text)}
+		.menu{display:flex; gap:16px; align-items:center}
+		.btn{background:var(--brand); color:#0b0c0f; padding:12px 18px; border-radius:12px; font-weight:700; box-shadow:var(--shadow)}
+		.hero{padding:56px 0 34px; text-align:center}
+		h1{font-size:clamp(34px,6vw,56px); margin:6px 0 10px}
+		.lead{color:var(--muted); font-size:clamp(16px,2.6vw,18px)}
+		.chips{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:16px}
+		.chip{background:var(--soft); padding:8px 12px; border:1px solid #262a33; border-radius:999px; color:#cfd2dd}
+		.grid{display:grid; gap:18px}
+		.grid-3{grid-template-columns:repeat(3,1fr)}
+		.grid-2{grid-template-columns:repeat(2,1fr)}
+		@media (max-width:900px){ .grid-3{grid-template-columns:1fr 1fr} }
+		@media (max-width:640px){ .grid-3, .grid-2{grid-template-columns:1fr} }
+
+		section{padding:28px 0}
+		.card{background:var(--card); border:1px solid #252831; border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+		.card h3{margin:0 0 4px}
+		.muted{color:var(--muted)}
+		.section-title{display:flex; align-items:end; justify-content:space-between; margin-bottom:14px}
+		footer{padding:40px 0 60px; color:#a8adbb}
+		.social{display:flex; gap:12px; justify-content:center}
+		.social a{display:inline-flex; padding:10px; background:var(--soft); border-radius:12px; border:1px solid #262a33}
+		.center{display:flex; justify-content:center; align-items:center}
+		.tag{font-size:12px; letter-spacing:.3px; color:#9aa3b5}
+		.avatar{width:90px; height:90px; border-radius:50%; border:3px solid #222733; box-shadow:var(--shadow)}
+		.about{display:grid; grid-template-columns:140px 1fr; gap:20px; align-items:center}
+		@media (max-width:560px){ .about{grid-template-columns:1fr; text-align:center} .about .center{justify-content:center}}
+		.kicker{font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#9aa3b5}
+	</style>
+</head>
+
+<body>
+	<!-- Navegaci3n -->
+	<header>
+		<div class="container nav">
+			<div class="logo">Mari <span style="color:var(--brand)">Viggiani</span></div>
+			<nav class="menu">
+				<a href="#servicios" class="pill">Servicios</a>
+				<a href="#portafolio" class="pill">Portafolio</a>
+				<a href="#sobre-mi" class="pill">Sobre md</a>
+				<a href="#contacto" class="btn">Contacto</a>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Hero -->
+	<section class="hero">
+		<div class="container">
+			<p class="kicker">Portafolio profesional</p>
+			<h1>Hola, soy <span style="color:var(--brand)">Mari Viggiani</span></h1>
+			<p class="lead">Ayudo a personas y marcas a destacar con trabajo de alta calidad. Aqud ver1s mis servicios, proyectos recientes y c3mo podemos trabajar juntos.</p>
+			<div class="chips">
+				<!-- Reemplaza estos chips por tus especialidades -->
+				<span class="chip">Servicio 1</span>
+				<span class="chip">Servicio 2</span>
+				<span class="chip">Servicio 3</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Servicios -->
+	<section id="servicios">
+		<div class="container">
+			<div class="section-title">
+				<h2>Servicios</h2>
+				<span class="tag">Elige lo que necesitas</span>
+			</div>
+			<div class="grid grid-3">
+				<div class="card">
+					<h3>Servicio A</h3>
+					<p class="muted">Descripci3n breve del servicio. Qu9 incluye y el resultado que obtiene el cliente.</p>
+				</div>
+				<div class="card">
+					<h3>Servicio B</h3>
+					<p class="muted">Descripci3n breve del servicio. Qu9 incluye y el resultado que obtiene el cliente.</p>
+				</div>
+				<div class="card">
+					<h3>Servicio C</h3>
+					<p class="muted">Descripci3n breve del servicio. Qu9 incluye y el resultado que obtiene el cliente.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Portafolio -->
+	<section id="portafolio">
+		<div class="container">
+			<div class="section-title">
+				<h2>Trabajos recientes</h2>
+				<span class="tag">Portafolio</span>
+			</div>
+			<!-- Reemplaza las im1genes /images/*.jpg por tus propios archivos -->
+			<div class="grid grid-3">
+				<a class="card" href="images/proyecto-1.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-1.jpg" alt="Proyecto 1">
+					<p class="muted">Proyecto 1 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-2.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-2.jpg" alt="Proyecto 2">
+					<p class="muted">Proyecto 2 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-3.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-3.jpg" alt="Proyecto 3">
+					<p class="muted">Proyecto 3 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-4.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-4.jpg" alt="Proyecto 4">
+					<p class="muted">Proyecto 4 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-5.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-5.jpg" alt="Proyecto 5">
+					<p class="muted">Proyecto 5 22 breve descripci3n</p>
+				</a>
+				<a class="card" href="images/proyecto-6.jpg" target="_blank" rel="noopener">
+					<img src="images/proyecto-6.jpg" alt="Proyecto 6">
+					<p class="muted">Proyecto 6 22 breve descripci3n</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sobre md -->
+	<section id="sobre-mi">
+		<div class="container card">
+			<div class="about">
+				<div class="center">
+					<!-- Reemplaza por tu foto en /images/avatar.jpg -->
+					<img class="avatar" src="images/avatar.jpg" alt="Foto de Mari Viggiani">
+				</div>
+				<div>
+					<h2>Sobre md</h2>
+					<p class="muted">
+						Breve biografda profesional, experiencia y enfoque de trabajo. A1ade logros, certificaciones o clientes clave.
+					</p>
+					<p class="muted">
+						Trabajo de forma remota y presencial. fTienes un proyecto? Conversemos.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contacto -->
+	<section id="contacto">
+		<div class="container">
+			<div class="section-title">
+				<h2>Contacto</h2>
+				<span class="tag">Hablemos de tu proyecto</span>
+			</div>
+
+			<div class="grid grid-2">
+				<div class="card">
+					<h3>Reserva o cotiza</h3>
+					<p class="muted">Respondo r1pido por WhatsApp y correo.</p>
+					<p>
+						<!-- Reemplaza con tus enlaces reales -->
+						<a class="btn" href="https://wa.me/50700000000" target="_blank" rel="noopener">WhatsApp</a>
+						&nbsp;&nbsp;
+						<a class="pill" href="mailto:contacto@mariviggiani.com">contacto@mariviggiani.com</a>
+					</p>
+				</div>
+
+				<div class="card">
+					<h3>Redes</h3>
+					<p class="muted">Sdgueme para ver trabajos y novedades.</p>
+					<div class="social">
+						<a href="https://instagram.com/tuusuario" target="_blank" aria-label="Instagram" rel="noopener">
+							<!-- dono Instagram (SVG) -->
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.6"/>
+								<circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
+								<circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+							</svg>
+						</a>
+						<a href="https://facebook.com/tuusuario" target="_blank" aria-label="Facebook" rel="noopener">
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<path d="M14.5 8.5h2V6h-2c-2.2 0-3.5 1.3-3.5 3.6V12H9v2.5h2v5h2.6v-5h2l.4-2.5h-2.4V9.7c0-.7.2-1.2.9-1.2Z" fill="currentColor"/>
+							</svg>
+						</a>
+						<a href="https://www.linkedin.com/in/tuusuario" target="_blank" aria-label="LinkedIn" rel="noopener">
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+								<path d="M6.5 9H4V20h2.5V9ZM5.3 4a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM20 20h-2.6v-5.9c0-1.9-.8-3-2.4-3-1.4 0-2.2.9-2.5 1.7-.1.3-.1.7-.1 1.1V20H9.9s.1-9.6 0-10.6H12l.1 1.7c.3-.9 1.9-2.1 4.1-2.1 2.6 0 3.8 1.6 3.8 4.7V20Z" fill="currentColor"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+		<div class="container center" style="flex-direction:column; gap:6px; text-align:center">
+			<small>&copy; <span id="y"></span> Mari Viggiani. Todos los derechos reservados.</small>
+			<small><a href="#top">Volver arriba</a></small>
+		</div>
+	</footer>
+
+	<script>
+		// A1o autom1tico en el footer
+		document.getElementById('y').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
