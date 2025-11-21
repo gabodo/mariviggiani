@@ -20,6 +20,17 @@ body {
     padding: 0 24px;
 }
 
+/* Design tokens */
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #666666;
+    --accent: #ffcdd2; /* soft pink */
+    --accent-strong: #ffb3c1;
+    --brand-cta: #e91e63;
+    --focus: #1a1a1a;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -120,45 +131,61 @@ nav li a:focus-visible {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 300;
-    margin-bottom: 24px;
-    color: #1a1a1a;
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--text);
     letter-spacing: -0.02em;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
-    color: #666;
-    max-width: 600px;
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+    color: var(--muted);
+    max-width: 680px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #ffcdd2;
-    color: #1a1a1a;
-    padding: 16px 32px;
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 500;
-    font-size: 1.125rem;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    border: 1px solid #ffcdd2;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.14s ease, transform 0.08s ease, box-shadow 0.12s ease;
+    border: 1px solid transparent;
 }
 
 .cta-button:hover,
 .cta-button:focus {
-    background-color: #ffb3c1;
-    transform: translateY(-1px);
+    background-color: var(--accent-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233,30,99,0.08);
 }
 
 .cta-button:focus-visible {
-    outline: 2px solid #1a1a1a;
-    outline-offset: 2px;
+    outline: 3px solid var(--focus);
+    outline-offset: 4px;
 }
+
+/* Reusable button classes */
+.btn { display:inline-block; text-decoration:none; cursor:pointer; }
+.btn-primary { background: var(--accent); color: var(--text); padding: 12px 22px; border-radius: 999px; font-weight:600; border:1px solid transparent; }
+.btn-primary:hover, .btn-primary:focus { background: var(--accent-strong); transform: translateY(-1px); }
+
+/* Inputs focus and accessible focus ring */
+#contact-form input:focus, #contact-form textarea:focus, #payment-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 205, 210, 0.18);
+    border-color: var(--accent-strong);
+}
+
+/* Invalid input state */
+.input-invalid { border-color: #e74c3c !important; box-shadow: 0 0 0 4px rgba(231,76,60,0.08) !important; }
 
 /* About Section */
 .about {

@@ -187,7 +187,37 @@ function updateCartDisplay() {
 // Form submission handler with accessibility announcement (Spanish)
 document.getElementById('contact-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
+    const form = this;
+    const fields = ['name', 'email', 'message'];
+    let firstInvalid = null;
+
+    // basic validation
+    fields.forEach(id => {
+        const input = form.querySelector('#' + id);
+        if (!input) return;
+        const val = input.value.trim();
+        if (!val) {
+            input.setAttribute('aria-invalid', 'true');
+            input.classList.add('input-invalid');
+            if (!firstInvalid) firstInvalid = input;
+        } else {
+            input.removeAttribute('aria-invalid');
+            input.classList.remove('input-invalid');
+        }
+    });
+
+    // simple email format check
+    const email = form.querySelector('#email');
+    if (email && email.value.trim()) {
+        const re = /\S+@\S+\.\S+/;
+        if (!re.test(email.value.trim())) {
+            email.setAttribute('aria-invalid', 'true');
+            email.classList.add('input-invalid');
+            if (!firstInvalid) firstInvalid = email;
+        }
+    }
+
     let liveRegion = document.getElementById('form-announcement');
     if (!liveRegion) {
         liveRegion = document.createElement('div');
@@ -198,11 +228,17 @@ document.getElementById('contact-form')?.addEventListener('submit', function(e) 
         liveRegion.style.left = '-9999px';
         document.body.appendChild(liveRegion);
     }
-    
+
+    if (firstInvalid) {
+        liveRegion.textContent = 'Por favor, completa los campos obligatorios correctamente.';
+        firstInvalid.focus();
+        return;
+    }
+
+    // Success
     liveRegion.textContent = '¡Gracias por tu mensaje! Te contactaré pronto.';
-    
-    this.reset();
-    this.querySelector('#name').focus();
+    form.reset();
+    form.querySelector('#name')?.focus();
 });
 
 // Checkout specific logic
@@ -231,18 +267,54 @@ function initializeCheckout() {
         paymentForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Basic validation
             const requiredFields = ['billing-name', 'billing-email', 'billing-address', 'billing-city', 'billing-state', 'billing-zip', 'card-number', 'card-expiry', 'card-cvv'];
-            let isValid = true;
-            requiredFields.forEach(field => {
-                const input = document.getElementById(field);
-                if (!input.value.trim()) {/* Omitted for brevity */} else {/* Omitted for brevity */}
+            let firstInvalid = null;
+
+            requiredFields.forEach(id => {
+                const input = document.getElementById(id);
+                if (!input) return;
+                const val = input.value.trim();
+                if (!val) {
+                    input.setAttribute('aria-invalid', 'true');
+                    input.classList.add('input-invalid');
+                    if (!firstInvalid) firstInvalid = input;
+                } else {
+                    input.removeAttribute('aria-invalid');
+                    input.classList.remove('input-invalid');
+                }
             });
 
-            if (!isValid) {/* Omitted for brevity */}
+            // Basic card number check (digits and length)
+            const card = document.getElementById('card-number');
+            if (card && card.value.trim()) {
+                const digits = card.value.replace(/\s+/g, '');
+                if (!/^\d{12,19}$/.test(digits)) {
+                    card.setAttribute('aria-invalid', 'true');
+                    card.classList.add('input-invalid');
+                    if (!firstInvalid) firstInvalid = card;
+                }
+            }
+
+            if (firstInvalid) {
+                announceMessage('Por favor, completa correctamente los campos requeridos.', 'polite');
+                firstInvalid.focus();
+                return;
+            }
 
             // Simulate payment processing
-            setTimeout(() => {/* Omitted for brevity */}, 2000);
+            const submitBtn = document.getElementById('submit-payment');
+            submitBtn.disabled = true;
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Procesando...';
+
+            setTimeout(() => {
+                // Clear cart and redirect to thank-you/confirmation (simple flow)
+                localStorage.removeItem('mariViCart');
+                announceMessage('Pago procesado. Gracias por tu compra.', 'polite');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                window.location.href = 'index.html';
+            }, 1500);
         });
     }
 }
