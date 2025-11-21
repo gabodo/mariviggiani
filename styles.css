@@ -75,6 +75,17 @@ nav ul {
     gap: 32px;
 }
 
+/* Mobile nav toggle */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
 nav li a {
     text-decoration: none;
     color: #1a1a1a;
@@ -409,7 +420,22 @@ footer { text-align:center; padding:32px 0; color:#666; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-toggle { display: inline-flex; align-items: center; }
     nav ul { display:none; }
+    header.nav-open nav ul {
+        display: flex;
+        position: absolute;
+        top: 64px;
+        right: 16px;
+        background: #fff;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        width: calc(100% - 32px);
+        max-width: 360px;
+    }
     .hero { padding-top: 100px; }
     .about-content { gap: 24px; }
     .checkout-content { flex-direction:column; }

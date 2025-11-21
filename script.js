@@ -268,6 +268,33 @@ document.addEventListener('DOMContentLoaded', () => {
     cart = getCart();
     updateCartCount();
 
+    // Mobile navigation toggle
+    const navToggle = document.querySelectorAll('.nav-toggle');
+    navToggle.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const header = btn.closest('header');
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            if (header) header.classList.toggle('nav-open');
+        });
+    });
+
+    // Close nav on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('header.nav-open').forEach(h => h.classList.remove('nav-open'));
+            document.querySelectorAll('.nav-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        }
+    });
+
+    // Close nav when clicking a link
+    document.querySelectorAll('#primary-navigation a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelectorAll('header.nav-open').forEach(h => h.classList.remove('nav-open'));
+            document.querySelectorAll('.nav-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        });
+    });
+
     // Check if on checkout page
     if (document.querySelector('.checkout')) {
         initializeCheckout();
